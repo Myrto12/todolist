@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %} 
+    <h1>To do list</h1>
+    <form action="" method="POST">
+        <input type="text" class="form-control" name="task_name" placeholder="enter new task">
+        <button class="ok-btn">ok</button>
+    </form>
+    <ul>
+    {% for task in Tasks %}
+        {% set checked ='checked' if task.state == 1 else '' %}
+    
+        <li class="default {{'done' if task.state == 1 else ''}}">
+            {{ task.name }}
+            <input type="checkbox" data-id = "{{ task.id }}" {{ checked }}>
+            {% if task.state==1 %}
+                <a href="{{ url_for('delete',id = task.id)}}">
+                    <img src="{{ url_for('static',filename='images/bin_btn.png')}}" width="30" height="30">
+                </a>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
+{% endblock %}

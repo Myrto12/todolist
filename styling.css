@@ -1,0 +1,65 @@
+body{
+    background-color:#c57857eb;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todolist{
+    background-color:#81ADBE;
+    padding:30px 30px 10px 30px;
+    margin: 0 auto;
+}
+.todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+.form-control{
+    border-radius:0;
+    background-color: #81ADBE;  
+    border: 2px solid #070808;  
+    padding: 6px 7px;       
+    width: 50%;                
+    margin: 10px 0;            
+    font-size: 16px;            
+}
+
+li.default{
+    background:#81ADBE;
+    border:none;
+    border-bottom:5px solid #81ADBE;
+    text-align: left
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+li.default:last-child{
+    border-bottom:none;
+}
+
+.container {
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: #040505;  
+    opacity: 0.7;    
+}
+
+.ok-btn {
+    background-color: #81ADBE; 
+    color:black;        
+    border: 2px solid #070808;  
+    padding: 6px 7px;        
+    text-align: center;     
+    font-size: 16px;          
+}
